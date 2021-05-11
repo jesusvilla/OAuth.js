@@ -1,6 +1,6 @@
 {
   "name": "oauth.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple OAuth 2.0 for NodeJS",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }

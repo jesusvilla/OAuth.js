@@ -4,7 +4,7 @@ const { generateRandom } = require('./src/utils')
 const DEFAULT_STATE = generateRandom(20)
 
 module.exports = class OAuth {
-  constructor ({ scope, redirect, client, auth, state }) {
+  constructor ({ scope, redirect, client, auth, state = DEFAULT_STATE }) {
     // client: { id, secret }
     // auth: { authorizeHost, authorizePath, tokenHost, tokenPath }
     this.scope = scope.join(' ')
@@ -13,7 +13,7 @@ module.exports = class OAuth {
     this.authorizeEndPoint = auth.authorizeHost + auth.authorizePath
     this.tokenEndPoint = auth.tokenHost + auth.tokenPath
     this.$http = httpClient
-    this.state = state || DEFAULT_STATE
+    this.state = state
   }
 
   /**
